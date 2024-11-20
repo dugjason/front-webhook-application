@@ -1,31 +1,38 @@
-# Getting started with Front Webhooks
+# Getting started with Front Application Webhooks
 
-This repository complements the [Front Webhooks](https://dev.frontapp.com/docs/webhooks-1) tutorial. Refer to the tutorial for specifics about how to work with Front Webhooks.
+This repository complements the [Front Application Webhooks](https://dev.frontapp.com/docs/application-webhooks) tutorial. Refer to the tutorial for specifics about how to work with Front Application Webhooks.
+
+This sample app should provide you with a basic template to help scaffold your own Application Webhooks, including secure verification of payload content. 
 
 ## Available scripts and installation
 
 In the project directory, you can run the following commands:
 
-### `npm install`
+Install dependencies.
+```bash
+npm install
+```
 
-Installs dependencies.
+Run the app in development mode; useful for quick restarts during development.
+```bash
+npm run dev
+```
 
-### `npm run start`
+Builds a production-ready version of your app.
+```bash
+npm run build
+```
 
-Runs the app from the production build.
-
-### `npm run build`
-
-Uses `tsc` to build a production-ready version of your app.
-
-### `npm run dev`
-
-Build + runs the app; useful for quick restarts during development.
+Run the built production version of the app.
+```bash
+npm run start
+```
 
 ## Framework
 
 This uses [Express](https://expressjs.com/) as a fast and minimalist framework to handle incoming webhook calls. We make use of [Express Middleware](https://expressjs.com/en/guide/using-middleware.html) to perform validation and verification on incoming requests.
 
-## (Local Development) Exposing your endpoint
+## Exposing your endpoint (Local Development) 
 
-For local development, you can use tools like [ngrok](https://ngrok.com/), [zrok.io](https://zrok.io/) or [localcan](https://localcan.com/) to expose your local server to the internet. After installing ngrok, run `ngrok http 3000` to create a public URL that forwards to your local server.
+For local development, you can use tools like [ngrok](https://ngrok.com/), [zrok.io](https://zrok.io/) or [localcan](https://localcan.com/) to expose your local server to the internet. 
+If using ngrok, run `ngrok http 3000` to create a public URL that forwards to the app running locally on your machine at port 3000.
